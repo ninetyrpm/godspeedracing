@@ -1,0 +1,10 @@
+{
+  "name": "godspeed-war-room",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Godspeed race planning website for GitHub and Vercel.",
+  "scripts": {
+    "build": "echo \"Static site: no build required\"",
+    "start": "echo \"Open index.html locally, or deploy to Vercel.\""
+  }
+}
