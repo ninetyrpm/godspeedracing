@@ -3,6 +3,17 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
+    {
+      "source": "/wtf",
+      "destination": "/api/wtf"
+    },
+    {
+      "source": "/wtf/",
+      "destination": "/api/wtf"
+    },
+    {
+      "source": "/((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
   ]
 }
