@@ -18,7 +18,7 @@ const people=[
     "MIGUEL",
     "JOHN MAHORNEY",
     "WALKING SHITPOST · SUPREME LEADER",
-    "The face of Godspeed. Allegedly named Miguel. Officially John Mahorney. Nobody remembers when the bit started, and it would be inappropriate to stop now. Built an entire cycling community while only recently discovering what maltodextrin is and what red lights are for. Leads in every way except when it’s his turn to pull. But there’s a reason every one of us would follow him anywhere: he built the best group of friends we’ve ever had, and nobody makes the suffering more fun."
+    "The face of Godspeed. Allegedly named Miguel. Officially John Mahorney. Nobody remembers when the bit started, and it would be inappropriate to stop now. Absolute menace at alley cats, where running red lights is considered strategy. Leads in every way except when it’s his turn to pull. But there’s a reason every one of us would follow him anywhere: he built the best group of teammates we’ve ever had, and nobody makes the suffering more fun."
   ],
   [
     "⚖️",
