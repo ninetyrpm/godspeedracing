@@ -76,3 +76,6 @@ module.exports=function(req,res){
  res.statusCode=expired?410:200;
  res.end(expired?dead():live(launch+86400000,pending));
 };
+
+// Render the same expiration document in a non-expiring, read-only preview route.
+module.exports.renderExpiredPage = dead;
