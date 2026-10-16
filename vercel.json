@@ -4,6 +4,14 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/api/wtf"
+    },
+    {
+      "source": "/race-control-7f3c",
+      "destination": "/index.html"
+    },
+    {
       "source": "/wtf",
       "destination": "/api/wtf"
     },
@@ -13,7 +21,7 @@
     },
     {
       "source": "/((?!.*\\.).*)",
-      "destination": "/index.html"
+      "destination": "/api/wtf"
     }
   ]
 }
