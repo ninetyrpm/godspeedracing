@@ -61,9 +61,9 @@ const wrap=s=>'<html lang="en"><head><meta charset="utf-8"><meta name="viewport"
 function dossier(p){return '<article class="card"><div class="emoji">'+p[0]+'</div><h2>'+p[1]+'</h2><p class="alias">'+p[2]+'</p><p class="meta">'+p[3]+'</p><p class="bio">'+p[4]+'</p></article>';}
 function live(until,pending){
  const script=pending?'':'<script>(function(){var deadline='+until+',el=document.getElementById("count");function update(){var n=Math.max(0,deadline-Date.now());if(!n){location.reload();return}var s=Math.ceil(n/1000),a=[Math.floor(s/3600),Math.floor(s%3600/60),s%60];el.textContent=a.map(function(x){return String(x).padStart(2,"0")}).join(":")}update();setInterval(update,1000)})();</script>';
- return wrap('<main><header><span>GODSPEED RACING / LOUISVILLE KY</span><b>🚒</b><span>UNOFFICIAL TEAM ROSTER</span></header><div class="hero"><h1>MEET<br>THE<br><span>PROBLEM.</span></h1><div class="timer"><label>WEBSITE SELF-DESTRUCTS IN</label><div id="count">'+(pending?'24:00:00':'--:--:--')+'</div>'+(pending?'<span class="small">PREVIEW / TIMER NOT ARMED</span>':'')+'</div></div><div class="section"><span>WHO THE FUCK ARE THESE GUYS?</span></div><section class="grid">'+people.map(dossier).join('')+'</section><footer>GODSPEED. 🚒</footer><div class="fine">THIS RECORD IS TEMPORARY.</div></main>'+script);
+ return wrap('<main><header><span>GODSPEED RACING / LOUISVILLE KY</span><b>🚒</b><span>UNOFFICIAL TEAM ROSTER</span></header><div class="hero"><h1>MEET<br>THE<br><span>PROBLEM.</span></h1><div class="timer"><label>TIME UNTIL I DENY THIS EVER EXISTED</label><div id="count">'+(pending?'24:00:00':'--:--:--')+'</div>'+(pending?'<span class="small">PREVIEW / TIMER NOT ARMED</span>':'')+'</div></div><div class="section"><span>WHO THE FUCK ARE THESE GUYS?</span></div><section class="grid">'+people.map(dossier).join('')+'</section><footer>GODSPEED. 🚒</footer></main>'+script);
 }
-function dead(){return wrap('<div class="dead"><h1>404</h1><p>GODSPEED RACING HAS CEASED OPERATIONS.</p><small>IT WAS AVAILABLE FOR 24 HOURS. YOU HAD YOUR CHANCE.</small><b>🚒</b></div>');}
+function dead(){return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>410 Gone</title><style>html,body{margin:0;background:#fff;color:#222;font:14px monospace}main{min-height:650vh;padding:20px;box-sizing:border-box}.error{margin:0}.clue{margin-top:610vh;text-align:center;font-size:30px}</style></head><body><main><p class="error">410 Gone</p><div class="clue" aria-label="firetruck">🚒</div></main></body></html>';}
 module.exports=function(req,res){
  const launch=Date.parse(process.env.GODSPEED_WTF_LAUNCH_AT||'');
  const pending=!Number.isFinite(launch);
@@ -73,6 +73,6 @@ module.exports=function(req,res){
  res.setHeader('CDN-Cache-Control','no-store');
  res.setHeader('Vercel-CDN-Cache-Control','no-store');
  res.setHeader('X-Robots-Tag','noindex, nofollow, noarchive');
- res.statusCode=expired?404:200;
+ res.statusCode=expired?410:200;
  res.end(expired?dead():live(launch+86400000,pending));
 };
