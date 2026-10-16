@@ -4,7 +4,7 @@ const people=[
   "BP",
   "THE GOOD DOCTOR",
   "PLASTIC SURGEON · MEDICALLY CERTIFIED POWERHOUSE",
-  "The nicest person you've ever met. Unclear why he continues to associate with us. Some say he's nine feet tall. Nobody has been able to independently verify this, largely because nobody can reach the top of his head."
+  "The nicest person you've ever met. It's unclear why he continues to associate with us degenerates. Some say he's nine feet tall. Nobody has been able to independently verify this, largely because nobody can reach the top of his head."
  ],
  [
   "🪑",
