@@ -8,16 +8,12 @@
       "destination": "/api/wtf"
     },
     {
-      "source": "/race-control-7f3c",
-      "destination": "/index.html"
-    },
-    {
       "source": "/wtf",
       "destination": "/api/wtf"
     },
     {
-      "source": "/wtf/",
-      "destination": "/api/wtf"
+      "source": "/race-control-7f3c",
+      "destination": "/war-room-internal.html"
     },
     {
       "source": "/((?!.*\\.).*)",
