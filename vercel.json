@@ -16,6 +16,10 @@
       "destination": "/war-room-internal.html"
     },
     {
+      "source": "/timeout-preview",
+      "destination": "/api/expired-preview"
+    },
+    {
       "source": "/((?!.*\\.).*)",
       "destination": "/api/wtf"
     }
